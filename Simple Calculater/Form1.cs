@@ -16,10 +16,11 @@ namespace Simple_Calculater
         {
             InitializeComponent();
         }
+        //initializing variables
         string calculateTotal, option;
         double num1, num2, result;
         
-
+        //Events for the buttons 
         private void button11_Click(object sender, EventArgs e)
         {
             textBox1.Text += "0";
