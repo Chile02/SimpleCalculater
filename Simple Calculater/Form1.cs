@@ -16,6 +16,9 @@ namespace Simple_Calculater
         {
             InitializeComponent();
         }
+        string calculateTotal, option;
+        double num1, num2, result;
+        
 
         private void button11_Click(object sender, EventArgs e)
         {
@@ -62,8 +65,74 @@ namespace Simple_Calculater
             textBox1.Text += "8";
         }
 
+        private void button15_Click(object sender, EventArgs e)
+        {
+            option = "+";
+            num1 = double.Parse(textBox1.Text);
+            textBox1.Clear();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            option = "-";
+            num1 = double.Parse(textBox1.Text);
+            textBox1.Clear();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            option = "*";
+            num1 = double.Parse(textBox1.Text);
+            textBox1.Clear();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            option = "/";
+            num1 = double.Parse(textBox1.Text);
+            textBox1.Clear();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += ".";
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            num2 = double.Parse(textBox1.Text);
+
+            switch (option)
+            {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if(num1 == 0)
+                    {
+                        Console.WriteLine(" :( ");
+                    }
+                    else
+                    {
+                        result = num1 / num2;
+                    }
+                    break;
+            }
+            textBox1.Text = result + "";
+
+
+
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
+      
             textBox1.Text += "9";
         }
 
